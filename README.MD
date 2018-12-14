@@ -1,6 +1,6 @@
-###PHP Hive connect over Cloudera ODBC Driver
+# PHP Hive connect over Cloudera ODBC Driver
 
-##Run example index.php
+### Run example index.php
 ```bash
 docker-compose run php
 ```
