@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  php:
+    build:
+      context: docker
+    volumes:
+      - ./:/app
+    command: php /app/index.php
