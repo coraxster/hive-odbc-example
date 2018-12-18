@@ -18,8 +18,10 @@ RUN set -ex; \
 	&& docker-php-ext-configure pdo_odbc --with-pdo-odbc=unixODBC,/usr \
 	&& docker-php-ext-install pdo_odbc
 
+#ADD https://downloads.cloudera.com/connectors/hive-2.5.25.1020/Debian/clouderahiveodbc_2.5.25.1020-2_amd64.deb /
 ADD clouderahiveodbc_2.5.25.1020-2_amd64.deb /
 RUN dpkg -i /clouderahiveodbc_2.5.25.1020-2_amd64.deb
 
-ADD odbc.ini /etc/odbc.ini
+# add odbc driver
+ADD odbcinst.ini /etc/odbcinst.ini
 ADD cloudera.hiveodbc.ini /opt/cloudera/hiveodbc/lib/64

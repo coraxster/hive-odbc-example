@@ -3,7 +3,8 @@
 $sql = 'show tables;';
 
 try {
-    $dbh = new PDO('odbc:DSN=MyHive;');
+    //$dbh = new PDO('odbc:DSN=ProdHive;');
+    $dbh = new PDO('odbc:DRIVER=Hive;Host=hive-datahub.test.env;PORT=10000;Schema=default;');
 
     $result = $dbh->query($sql);
 
