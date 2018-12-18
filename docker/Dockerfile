@@ -23,5 +23,5 @@ ADD clouderahiveodbc_2.5.25.1020-2_amd64.deb /
 RUN dpkg -i /clouderahiveodbc_2.5.25.1020-2_amd64.deb
 
 # add odbc driver
-ADD odbcinst.ini /etc/odbcinst.ini
-ADD cloudera.hiveodbc.ini /opt/cloudera/hiveodbc/lib/64
+ADD hive_odbc.ini /etc/
+ADD odbcinst.ini /etc/
