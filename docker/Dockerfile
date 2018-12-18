@@ -21,9 +21,5 @@ RUN set -ex; \
 ADD clouderahiveodbc_2.5.25.1020-2_amd64.deb /
 RUN dpkg -i /clouderahiveodbc_2.5.25.1020-2_amd64.deb
 
-ADD odbc.ini /opt/cloudera/hiveodbc/Setup
+ADD odbc.ini /etc/odbc.ini
 ADD cloudera.hiveodbc.ini /opt/cloudera/hiveodbc/lib/64
-
-ENV ODBCSYSINI=/opt/cloudera/hiveodbc/Setup
-ENV ODBCINI=/opt/cloudera/hiveodbc/Setup/odbc.ini
-ENV SIMBAINI=/opt/cloudera/hiveodbc/lib/64/cloudera.hiveodbc.ini
